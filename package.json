@@ -17,6 +17,8 @@
     "web-ifc-viewer": "1.0.212"
   },
   "overrides": {
-    "web-ifc": "0.0.46"
-  }
+  "web-ifc-three/web-ifc": "0.0.46",
+  "web-ifc": "0.0.46"
+}
+
 }
