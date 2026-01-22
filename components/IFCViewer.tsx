@@ -19,7 +19,7 @@ const IFCViewer: React.FC<IFCViewerProps> = ({ modelPath }) => {
     const viewer = new IfcViewerAPI({
       container: containerRef.current,
       backgroundColor: new THREE.Color(0xffffff),
-      wasmPath: "/wasm/",  // <-- add this line
+      wasmPath: "C:\Users\Formaspace Studio\bim-viewer\public\web-ifc.wasm",  // <-- add this line
     });
 
     // Optional: Add grid and axes
