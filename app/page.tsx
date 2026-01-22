@@ -1,11 +1,11 @@
 // app/page.tsx
 import React from "react";
-import IFCViewer from "../components/IFCViewer";
 
 export default function HomePage() {
   return (
-    <div style={{ width: "100vw", height: "100vh" }}>
-      <IFCViewer modelPath="/models/sample.ifc" />
+    <div style={{ padding: 40 }}>
+      <h1>Welcome to BIM Viewer</h1>
+      <p>Your Next.js App Router page is working!</p>
     </div>
   );
 }
