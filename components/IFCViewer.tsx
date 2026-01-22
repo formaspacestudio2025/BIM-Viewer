@@ -19,7 +19,8 @@ const IFCViewer: React.FC<IFCViewerProps> = ({ modelPath }) => {
     const viewer = new IfcViewerAPI({
       container: containerRef.current,
       backgroundColor: new THREE.Color(0xffffff),
-      wasmPath: "/web-ifc.wasm",  // <-- add this line
+      wasmPath: "/web-ifc.wasm", // <-- URL path from public folder
+});
     });
 
     // Optional: Add grid and axes
