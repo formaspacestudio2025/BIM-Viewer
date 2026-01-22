@@ -1,4 +1,6 @@
 // components/IFCViewer.tsx
+"use client"; // <-- Add this line at the very top
+
 import React, { useEffect, useRef } from "react";
 
 interface IFCViewerProps {
@@ -10,9 +12,8 @@ const IFCViewer: React.FC<IFCViewerProps> = ({ modelPath }) => {
 
   useEffect(() => {
     if (!containerRef.current) return;
-
-    // Initialize your IFC viewer here
     console.log("Load IFC model:", modelPath);
+    // TODO: Load your IFC model with three.js or web-ifc-viewer
   }, [modelPath]);
 
   return <div ref={containerRef} style={{ width: "100%", height: "100%" }} />;
