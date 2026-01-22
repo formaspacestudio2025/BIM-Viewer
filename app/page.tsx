@@ -1,11 +1,9 @@
-// app/page.tsx
-import React from "react";
-import IFCViewer from "../components/IFCViewer";
+import dynamic from "next/dynamic";
 
-export default function HomePage() {
-  return (
-    <div style={{ width: "100%", height: "100vh" }}>
-      <IFCViewer />
-    </div>
-  );
+const IFCViewer = dynamic(() => import("../components/IFCViewer"), {
+  ssr: false,
+});
+
+export default function Page() {
+  return <IFCViewer />;
 }
