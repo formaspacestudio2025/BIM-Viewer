@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef } from "react";
-import { Viewer } from "web-ifc-viewer";
+import Viewer from "web-ifc-viewer"; // <- default import
 import * as THREE from "three";
 
 interface IFCViewerProps {
@@ -14,9 +14,11 @@ const IFCViewer: React.FC<IFCViewerProps> = ({ modelPath }) => {
   useEffect(() => {
     if (!containerRef.current) return;
 
-    const viewer = new Viewer({ container: containerRef.current, backgroundColor: new THREE.Color(0xffffff) });
+    const viewer = new Viewer({
+      container: containerRef.current,
+      backgroundColor: new THREE.Color(0xffffff),
+    });
 
-    // Load your IFC file
     viewer.IFC.loadIfcUrl(modelPath).then(() => {
       viewer.axes.setAxes();
       viewer.grid.setGrid();
