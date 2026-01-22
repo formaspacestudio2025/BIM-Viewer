@@ -2,7 +2,6 @@
 
 import React, { useEffect, useRef } from "react";
 import * as THREE from "three";
-// Import the correct class
 import { IfcViewerAPI } from "web-ifc-viewer";
 
 interface IFCViewerProps {
@@ -15,19 +14,15 @@ const IFCViewer: React.FC<IFCViewerProps> = ({ modelPath }) => {
   useEffect(() => {
     if (!containerRef.current) return;
 
-    // Initialize the viewer
     const viewer = new IfcViewerAPI({
       container: containerRef.current,
       backgroundColor: new THREE.Color(0xffffff),
-      wasmPath: "/web-ifc.wasm", // <-- URL path from public folder
-});
+      wasmPath: "/web-ifc.wasm", // relative to public folder
     });
 
-    // Optional: Add grid and axes
     viewer.grid.setGrid();
     viewer.axes.setAxes();
 
-    // Load the IFC model
     viewer.IFC.loadIfcUrl(modelPath).then(() => {
       console.log("IFC model loaded", modelPath);
     });
