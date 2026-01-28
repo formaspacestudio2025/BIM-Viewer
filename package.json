@@ -8,8 +8,9 @@
     "start": "next start"
   },
   "dependencies": {
-    "three": "^0.158.0",
+    "three": "0.149.0",
     "web-ifc": "^0.0.46",
     "web-ifc-three": "0.0.124"
   }
 }
+
